@@ -1,8 +1,7 @@
-// src/app/page.js
 'use client';
 import { useState } from 'react';
-import Sidebar from './components/Sidebar';
-import TextEntry from './components/TextEntry';
+import Sidebar from '../app/components/Sidebar';
+import TextEntry from '../app/components/TextEntry';
 
 export default function Home() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -11,28 +10,35 @@ export default function Home() {
     if (suggestion === 'About Me') {
       setSidebarOpen(true);
     }
-    // Add more suggestion logic here if needed
+    // Add more suggestion logic if needed.
   };
 
   const handleTextSubmit = (text) => {
-    // If user types "about me" in any form, open the sidebar
     if (text.toLowerCase().includes('about me')) {
       setSidebarOpen(true);
     }
-    // Handle additional text-based queries here
+    // Handle additional text-based queries here.
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#06647B] to-black">
-      {/* Sidebar */}
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#06647B] to-black">
+      {/* Sidebar slides in from the left */}
       <Sidebar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)} />
 
-      {/* Main content */}
+      {/* Central content */}
       <div className="text-center">
-        <h1 className="text-white text-3xl mb-4">
+        {/* Welcome text */}
+        <h1 className="text-white text-3xl mb-6">
           Welcome! What would you like to know?
         </h1>
-        <div className="mb-6">
+
+        {/* GPT-like Text Entry */}
+        <div className="flex justify-center mb-6">
+          <TextEntry onSubmit={handleTextSubmit} />
+        </div>
+
+        {/* Suggestion Buttons */}
+        <div>
           <button
             onClick={() => handleSuggestionClick('About Me')}
             className="text-white hover:underline mx-2 focus:outline-none"
@@ -52,7 +58,6 @@ export default function Home() {
             Work
           </button>
         </div>
-        <TextEntry onSubmit={handleTextSubmit} />
       </div>
     </div>
   );
