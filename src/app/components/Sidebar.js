@@ -1,4 +1,3 @@
-// src/components/Sidebar.js
 'use client';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
@@ -14,7 +13,7 @@ export default function Sidebar({ isOpen, onClose }) {
     <AnimatePresence>
       {isOpen && (
         <motion.aside
-          className="fixed top-0 left-0 w-80 h-full p-6 bg-white/10 backdrop-blur-md rounded-r-2xl shadow-lg z-50"
+          className="h-full w-64 bg-white/10 backdrop-blur-md shadow-lg p-4 flex flex-col"
           initial="hidden"
           animate="visible"
           exit="exit"
@@ -23,7 +22,7 @@ export default function Sidebar({ isOpen, onClose }) {
         >
           <button
             onClick={onClose}
-            className="text-white text-sm mb-4 focus:outline-none"
+            className="text-white text-sm mb-4 self-end focus:outline-none"
           >
             Close
           </button>
@@ -37,7 +36,7 @@ export default function Sidebar({ isOpen, onClose }) {
               />
             </div>
             <p className="text-white text-center">
-              Hi, I&apos;m [Your Name]. I&apos;m a developer passionate about
+              Hi, I&apos;m Preetham. I&apos;m a developer and designer passionate about
               creating interactive user experiences.
             </p>
           </div>
