@@ -1,26 +1,65 @@
+/* src/app/styles/globals.css */
+
+/* Keep this if it was part of your original setup */
 @import "tailwindcss";
 
 :root {
+  /* Default light mode variables (adjust if needed) */
   --background: #ffffff;
   --foreground: #171717;
 }
 
+/* Keep this if it was part of your original setup */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-geist-sans); /* Ensure these fonts are loaded */
+  --font-mono: var(--font-geist-mono); /* Ensure these fonts are loaded */
 }
 
+/* Dark mode variables */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Dark mode background and foreground */
+    --background: #0a0a0a; /* Base dark background */
+    --foreground: #ededed; /* Base light text color for dark mode */
   }
 }
 
 body {
-  background: var(--background);
+  /* Apply the desired gradient background */
+  /* Adjusted gradient: Blue (#06647B) starts at 0%, Black (#000000) starts transitioning fully only at 85% */
+  /* This gives the blue color significantly more space */
+  background: linear-gradient(to bottom right, #06647B 0%, #000000 85%);
+  /* Use the CSS variable for text color (handles dark/light mode) */
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Keep your original font or use Tailwind's default sans-serif */
+  font-family: Arial, Helvetica, sans-serif; /* Or remove if using Tailwind defaults via layout.js */
+
+  /* Ensure body takes at least full height */
+  min-height: 100vh;
+  /* Prevent body scrollbars if page content fits */
+  overflow: hidden;
+}
+
+/* Optional: Style scrollbars (keep if desired) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(6, 100, 123, 0.5);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(6, 100, 123, 0.7);
 }
