@@ -1,8 +1,4 @@
 'use client';
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Sidebar from '../app/components/Sidebar';
-import TextEntry from '../app/components/TextEntry';
 
 export default function Home() {
   // Sidebar open/close
