@@ -30,7 +30,7 @@ body {
   /* Apply the desired gradient background */
   /* Adjusted gradient: Blue (#06647B) starts at 0%, Black (#000000) starts transitioning fully only at 85% */
   /* This gives the blue color significantly more space */
-  background: linear-gradient(to bottom right, #06647B 0%, #000000 85%);
+  background: linear-gradient(to bottom right, #06647B 0%, #000000 90%);
   /* Use the CSS variable for text color (handles dark/light mode) */
   color: var(--foreground);
   /* Keep your original font or use Tailwind's default sans-serif */
