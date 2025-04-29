@@ -57,7 +57,7 @@ export default function AboutSection() {
 
             {/* 2. Core Bio */}
             <p className="text-center max-w-3xl mx-auto">
-                 Hello! I'm Preetham Kasturi, a passionate creator thriving at the intersection of human-centered design and robust development. As a recent Master's graduate, I'm driven to craft digital experiences that are not only visually stunning and intuitive but also technically sound and performant. This very portfolio is a playground for that philosophy, built with Next.js, Tailwind, and Framer Motion to showcase work in an interactive way.
+                 Hello! I&apos;m Preetham Kasturi, a passionate creator thriving at the intersection of human-centered design and robust development. As a recent Master&apos;s graduate, I&apos;m driven to craft digital experiences that are not only visually stunning and intuitive but also technically sound and performant. This very portfolio is a playground for that philosophy, built with Next.js, Tailwind, and Framer Motion to showcase work in an interactive way.
             </p>
 
             {/* 3. Experience Section Divider */}
