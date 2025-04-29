@@ -203,7 +203,7 @@ export default function Home() {
                         case 'skills': return <SkillsSection key="skills" />;
                         case 'connect': return <ConnectSection key="connect" onSubmit={handleConnectSubmit} />;
                         case 'game': return ( <motion.div key="tic-tac-toe-main" className="flex justify-center items-start pt-8" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.4 }} > <TicTacToeGame /> </motion.div> );
-                        case 'none': default: return <motion.div key="prompt" initial={{opacity:0}} animate={{opacity:1}} className="p-6 text-center text-gray-300 text-lg">Type a command like 'about', 'projects', 'skills', or 'connect'.</motion.div>;
+                        case 'none': default: return <motion.div key="prompt" initial={{opacity:0}} animate={{opacity:1}} className="p-6 text-center text-gray-300 text-lg">Type a command like about, projects, skills, or connect.</motion.div>;
                     }
                 })()}
             </AnimatePresence>
