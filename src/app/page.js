@@ -24,7 +24,6 @@ export default function Home() {
     // --- State Variables ---
     const [isWelcomeVisible, setIsWelcomeVisible] = useState(true);
     const [activeSection, setActiveSection] = useState('none'); // 'none', 'about', 'projectsList', 'projectDetail', 'skills', 'connect', 'game'
-    const [showSidebar, setShowSidebar] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null); // Holds the *object* of the selected project
     const [showTopLeftHeader, setShowTopLeftHeader] = useState(false); // Controls top-left header visibility
     const [displayedCommand, setDisplayedCommand] = useState(""); // State for text in command bar
@@ -40,7 +39,6 @@ export default function Home() {
             id: 'p1', // Example: Voodies (Make it wide)
             title: 'Voodies',
             shortDesc: 'A startup revolutionizing food discovery...',
-            description: '...',
             tech: ['React Native', 'Firebase', 'UX/UI'],
             imageUrl: '/images/voodies.jpg', // Replace with your actual image path
             liveLink: '#',
@@ -166,7 +164,6 @@ export default function Home() {
         setDisplayedCommand("My Work"); // Reset command bar text
      };
 
-    // Handles connect form submission (passed down to ConnectSection)
     const handleConnectSubmit = (messageContent) => {
         console.log("Connect submitted in Page:", messageContent);
         // Add logic here (e.g., show thank you message, clear section)
